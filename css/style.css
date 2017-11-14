@@ -1,0 +1,65 @@
+/*zeby zauwazyc efekt rotate() nalezy ustawic transition */
+
+#transform img {
+    /*    transform: rotate(20deg);*/
+    transition: all 1s linear;
+}
+
+#transform img:hover {
+    transform: rotate(360deg);
+}
+
+/*translate sluzy do przesuwania elementow */
+
+/*
+translateX() - do przesuwania po osi X
+translateY() - do przesuwania po osi Y
+translate (ox, oy) - skrotowa wersja
+*/
+
+#transform2 img {
+    transition: all 1s linear;
+}
+
+#transform2 img:hover  {
+    transform: translate(150px, -100px);
+}
+/*
+scale() - powieksza obraz/element
+scaleX() - tylko w poziomie
+scaleY() - tylko w pionie
+parametrem jest liczba rzeczywista
+
+przy uzyciu "-" dostajemy odwrocony kontent
+*/
+#transform3 img {
+    transition: all 1s linear;
+    overflow: hidden;
+    width: 40%
+}
+
+#transform3 img:hover  {
+    transform: scale(1.5);
+}
+
+#animate img {
+    animation-name: obroc;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes obroc {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    50% {
+        transform: rotate(50deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
